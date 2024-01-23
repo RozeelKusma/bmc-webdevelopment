@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <img id="myImage" src="day2.jpg" alt="second" />
+  </body>
+  <script>
+    const myImg = document.getElementById("myImage");
+    setTimeout(() => {
+      myImg.src = "images.jpg";
+      myImg.style.border = "1px solid red";
+    }, 5000);
+    // myImg.addEventListener("click", function () {
+    // });
+  </script>
+</html>

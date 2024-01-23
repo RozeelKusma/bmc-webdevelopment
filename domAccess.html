@@ -1,0 +1,45 @@
+<html>
+  <head>
+    <title>Accessing DOM</title>
+  </head>
+  <body>
+    <p id="forHover">This is a paragraph tag</p>
+    <h1 class="heading">THis is a heading tag</h1>
+    <p class="heading">This is paragraph with classname</p>
+    <p id="newParagraph">this is a paragraph with Id</p>
+    <div id="division">
+      <img src="day2.jpg" alt="mm" />
+    </div>
+    <button id="mybtn">Click to change</button>
+  </body>
+  <script>
+    const elm1 = document.getElementById("division");
+    const elm2 = document.getElementsByClassName("heading");
+    const elm3 = document.getElementsByTagName("p");
+    const btnElm = document.getElementById("mybtn");
+    const myParagrph = document.getElementById("forHover");
+
+    btnElm.addEventListener("click", function () {
+      myParagrph.style.color = "red";
+      myParagrph.style.backgroundColor = "blue";
+    });
+    // myParagrph.addEventListener("mouseenter", changeContent);
+    // myParagrph.addEventListener("mouseout", revertContent);
+    // function getMyElement() {
+    //   console.log(elm1);
+    //   console.log(elm2);
+    //   console.log(elm3);
+    // }
+
+    // getMyElement();
+    function changeContent() {
+      elm3[0].innerHTML = "Hover textt here";
+    }
+    function revertContent() {
+      elm3[0].innerHTML = "Back to normal";
+    }
+    function changeElement() {
+      elm1.innerHTML = "This is inner HTML";
+    }
+  </script>
+</html>

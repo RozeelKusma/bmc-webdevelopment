@@ -1,0 +1,41 @@
+.container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 20px;
+}
+.item1 {
+  border: 1px solid red;
+  background-color: chocolate;
+  grid-column: 1 / span 3;
+}
+.item2 {
+  border: 1px solid red;
+  width: 100%;
+  background-color: yellowgreen;
+}
+.item3 {
+  border: 1px solid red;
+  width: 100%;
+  background-color: violet;
+}
+.item4 {
+  border: 1px solid red;
+  width: 100%;
+  background-color: thistle;
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    background-color: green;
+    display: flex;
+    flex-direction: row;
+  }
+  .item1 {
+    background-color: blue;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .container {
+    background-color: crimson;
+  }
+}
